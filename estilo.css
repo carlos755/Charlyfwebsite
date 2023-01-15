@@ -9,14 +9,6 @@
 }
 
 /* ===== COLOURS =====*/
-:root{
-    --body-color: #e4e9f7;
-    --body-color: #4070f4;
-    --body-color: #010718;
-    --body-color: #fff;
-    --body-color: #f2f2f2;
-    --body-color: #010718;
-}
 
 body{
     height: 100vh;
@@ -39,6 +31,8 @@ nav{
     left: 0;
     height: 70px;
     width: 100%;
+    border-bottom:  1px solid #fff;
+    box-shadow:  5px 0 10px rgba(0, 0, 0, .6);
      background-color: #ffff00;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2380e680'/%3E%3Cstop offset='1' stop-color='%2380e680' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23806680'/%3E%3Cstop offset='1' stop-color='%23806680' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
     background-attachment: fixed;
@@ -77,9 +71,9 @@ nav .nav-bar .logo a{
 .nav-links li a{
     position: relative;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 700;
     text-decoration: none;
-    padding: 10px;
+    padding: 20px;
 }
 
 .nav-links li a::before{
@@ -100,14 +94,9 @@ nav .nav-bar .logo a{
     opacity: 1;
 }
 
-.nav-bar .darKLight-searchBox{
-    display: flex;
-    align-items: center; 
-}
-
 .darKLight-searchBox .dark-light,
 .darKLight-searchBox .searchBox{
-    height: 40px;
+    height: 80px;
     width: 40px;
     display: flex;
     align-items: center;
