@@ -1,0 +1,26 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # cambiar "main" al nombre de tu rama principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '12'
+    - name: Install dependencies
+      run: npm install
+    - name: Build website
+      run: npm run build # cambiar "npm run build" con el comando que construye tu sitio web
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.SSH_DEPLOY_KEY }}
+        publish_dir: ./build # cambiar "./build" al directorio donde se construye tu sitio web
+        publish_branch: gh-pages # cambiar "gh-pages" al nombre de la rama donde quieres desplegar tu sitio web
