@@ -201,3 +201,6 @@ p {
     position: static;
     text-align: center;
 }
+@media (max-width: 767px)
+@media (min-width: 768px) and (max-width: 990px)
+@media (min-width: 991px)
