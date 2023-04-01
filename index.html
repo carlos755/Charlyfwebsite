@@ -10,6 +10,8 @@
 	 <link rel="stylesheet" href="estilo.css">
 	 <script src="https://apis.google.com/js/client.js"></script>
      <script src="./jscript/app.js"></script>
+	 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
      <link
      rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -20,12 +22,13 @@
 		<div id="loader"></div>
 		<div id="loader-text">Cargando...</div>
 	  </div>
-	  
-	<header>
-		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-	  <nav>
+	   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	  <nav class="navbar">
+		<header class="headers">
 		<div class="nav-bar">
+
 			<span class="logo"><a href="file:///D:/Users/Usuario/Documents/Program/index.html">Charlyfortnite</a></span>
+
 			<div class="menu">
 		 <ul class="nav-links">
 			<li><a href="file:///D:/Users/Usuario/Documents/Program/index.html">Inicio</a></li>
@@ -33,14 +36,21 @@
 			<li><a href="file:///D:/Users/Usuario/Documents/Program/index%20gaming.html">sitios</a></li>
 			<li><a href="">Redes</a></li>
 			<li><a href="#">Sobre Mi</a></li>
+			<div class="show"></div>
 			</ul>
 		</div>
+		<div class="burger-icon">
+			<div class="show">
+		<i class="bx bx-menu"id="menu-icon"></i>
+		</div>
+		</div>
+		</div>
+		</header>
 	</nav>
 	<div id="icon-menu">
 		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/>
 	</div>
 
-</header>
 	  <body>
 	<h1 align="center">Carlos cota / El mauri</h1>
 
@@ -53,8 +63,6 @@
 		<button onclick="pauseAudio()">Pausar</button>
 		<button onclick="nextAudio()">Siguiente</button>
 	  </div>
-
-	<iframe class="nasa" src="https://mars.nasa.gov/layout/embed/send-your-name/future/certificate/?cn=632737230521" frameborder="0"></iframe>
 
 	<h1 align="center" style="color:#08F72C;">Hola Gamers como estan</h1>
 

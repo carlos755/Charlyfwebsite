@@ -35,3 +35,23 @@ window.addEventListener('load', function() {
     audio.currentTime = 0;
     audio.play();
   }
+  var song1 = document.getElementById("cancion1");
+  var song2 = document.getElementById("cancion2");
+  var song3 = document.getElementById("cancion3");
+  
+  song1.addEventListener('ended', function() {
+     song2
+  })  
+const burgerIcon = document.querySelector('burger-icon');
+const menuItems = document.querySelector('.navbar');
+const menu = document.querySelector('.menu');
+
+burgerIcon.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+document.addEventListener('click', (event) => {
+  if (!menu.contains(event.target) && !burgerIcon.contains(event.target)) {
+    menu.classList.remove('show');
+  }
+});
