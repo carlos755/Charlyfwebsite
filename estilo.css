@@ -17,6 +17,9 @@ body{
 #menu-icon{
     display: none;
     top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
     left: 0;
     right: 0;
 }
@@ -56,7 +59,9 @@ body{
 @media screen and (max-width: 992px) {
 #menu-icon{
     padding: 0 40px;
-    position: relative
+    display: block;
+    position: relative;
+    translate: 0 10 23px;
 }
 .shouw{
     display: block;
@@ -76,7 +81,7 @@ nav .nav-bar .logo a{
 }
 }
 .navbar{
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     height: 50px;
@@ -454,4 +459,22 @@ transition: all 0.7s;
 }
 ul.show{
     top: 65px;
+}
+.text{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0
+}
+.t{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(176deg, #1100ff, #00ff00 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0
 }

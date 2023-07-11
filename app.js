@@ -10,6 +10,11 @@ window.addEventListener('load', function() {
     var loader = document.getElementById('loader-container');
     loader.style.display = 'none';
   });
+  window.addEventListener('load', function() {
+    var loader = document.getElementById('loader-container-text');
+    loader.style.display = 'none';
+    });
+
   var canciones = ["cancion1", "cancion2", "cancion3"];
   var indiceActual = 0;
   cancion1.volume = 0.2;
@@ -42,16 +47,18 @@ window.addEventListener('load', function() {
   song1.addEventListener('ended', function() {
      song2
   })  
-const burgerIcon = document.querySelector('burger-icon');
-const menuItems = document.querySelector('.navbar');
-const menu = document.querySelector('.menu');
-
-burgerIcon.addEventListener('click', () => {
-  menu.classList.toggle('show');
-});
-
-document.addEventListener('click', (event) => {
-  if (!menu.contains(event.target) && !burgerIcon.contains(event.target)) {
-    menu.classList.remove('show');
-  }
-});
+  song2.addEventListener('ended', function() {
+    song3
+    })
+    song3.addEventListener('ended', function() {
+      song1
+      })
+      function playSong1() {
+        song1.play();
+        }
+        function playSong2() {
+          song2.play();
+          }
+          function playSong3() {
+            song3.play();
+            }
