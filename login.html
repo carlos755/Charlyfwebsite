@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iniciar sesión con Google</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar sesión</h2>
+        <button id="google-signin-button">Iniciar sesión con Google</button>
+    </div>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+button#google-signin-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #4285F4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button#google-signin-button:hover {
+    background: #3573D1;
+}
+
+    </style>
+    <script>
+        gapi.load('auth2', function() {
+    gapi.auth2.init({
+        client_id: '88336165325-l2vaismja9p93b0e6h8mic8hr3i3ohee.apps.googleusercontent.com'
+    });
+
+    gapi.signin2.render('google-signin-button', {
+        'scope': 'email profile',
+        'width': 240,
+        'height': 40,
+        'longtitle': true,
+        'theme': 'light'
+    });
+});
+
+    </script>
+</body>
+</html>
