@@ -78,15 +78,18 @@ window.addEventListener('load', function() {
               'onfailure': onSignInFailure
           });
       });
-      
-      function onSignIn(googleUser) {
-          // Aquí puedes acceder a la información del usuario, como el ID del usuario y el token de acceso.
-          var profile = googleUser.getBasicProfile();
-          console.log('ID: ' + profile.getId());
-          console.log('Nombre: ' + profile.getName());
-          console.log('Email: ' + profile.getEmail());
-      }
 
-      function onSignInFailure(error) {
-          console.log('Error al iniciar sesión con Google: ' + error.error);
-      }
+      function onSignIn(googleUser) {
+        // Aquí puedes acceder a la información del usuario, como el ID del usuario y el token de acceso.
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId());
+        console.log('Nombre: ' + profile.getName());
+        console.log('Email: ' + profile.getEmail());
+    
+        // Ocultar el botón después de que el usuario haya iniciado sesión
+        var signInButton = document.getElementById("google-signin-button");
+        signInButton.style.display = "none";
+    
+        // Puedes enviar la información a tu servidor y autenticar al usuario allí.
+    }
+    
