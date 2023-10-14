@@ -57,8 +57,36 @@ window.addEventListener('load', function() {
         song1.play();
         }
         function playSong2() {
-          song2.play();
-          }
-          function playSong3() {
-            song3.play();
-            }
+      song2.play();
+      }
+      function playSong3() {
+        song3.play();
+        }
+
+        gapi.load('auth2', function() {
+          gapi.auth2.init({
+              client_id: '88336165325-l2vaismja9p93b0e6h8mic8hr3i3ohee.apps.googleusercontent.com'
+          });
+          
+          gapi.signin2.render('google-signin-button', {
+              'scope': 'email profile',
+              'width': 240,
+              'height': 40,
+              'longtitle': true,
+              'theme': 'light',
+              'onsuccess': onSignIn,
+              'onfailure': onSignInFailure
+          });
+      });
+      
+      function onSignIn(googleUser) {
+          // Aquí puedes acceder a la información del usuario, como el ID del usuario y el token de acceso.
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId());
+          console.log('Nombre: ' + profile.getName());
+          console.log('Email: ' + profile.getEmail());
+      }
+
+      function onSignInFailure(error) {
+          console.log('Error al iniciar sesión con Google: ' + error.error);
+      }
